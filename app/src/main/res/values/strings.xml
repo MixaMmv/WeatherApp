@@ -2,4 +2,9 @@
     <string name="app_name">Weather App</string>
     <string name="settings">Settings</string>
     <string name="weather">Weather</string>
+    <string name="temperature">Current Temp %.2f °C</string>
+    <string name="humidity">Humidity %d </string>
+    <string name="temperature_min">Min Temp %.2f °C</string>
+    <string name="temperature_max">Max Temp %.2f °C</string>
+
 </resources>

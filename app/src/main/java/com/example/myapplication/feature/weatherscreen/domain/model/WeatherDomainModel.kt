@@ -1,4 +1,4 @@
 package com.example.myapplication.feature.weatherscreen.domain.model
 
-class WeatherDomainModel(val temperature: String, val mintemperature: String, val maxtemperature: String) {
+class WeatherDomainModel(val temperature: Double, val mintemperature: Double, val maxtemperature: Double, val windDomainModel: WindDomainModel) {
 }

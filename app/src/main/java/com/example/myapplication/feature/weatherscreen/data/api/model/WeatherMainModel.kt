@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName
 
 data class WeatherMainModel(
     @SerializedName("temp")
-    val temp: String,
+    val temp: Double,
     @SerializedName("temp_min")
-    val tempMin: String,
+    val tempMin: Double,
     @SerializedName("temp_max")
-    val tempMax: String
-) {
-}
-
+    val tempMax: Double,
+    @SerializedName("humidity")
+    val humidity: Int
+)
 
 //{
 //    "main": {

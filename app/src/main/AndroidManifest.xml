@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".feature.weatherscreen.ui.WeatherScreenViewActivity" />
+        <activity android:name=".feature.windscreen.WindScreenActivity" />
+
     </application>
 
 </manifest>
