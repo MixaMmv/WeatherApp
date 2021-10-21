@@ -2,13 +2,14 @@ package com.example.myapplication.feature.weatherscreen.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.myapplication.R
 import com.example.myapplication.feature.weatherscreen.domain.model.WeatherDomainModel
-import com.example.myapplication.feature.windscreen.WindScreenActivity
+import com.example.myapplication.feature.windscreen.ui.WindScreenActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class WeatherScreenViewActivity : AppCompatActivity() {
@@ -18,9 +19,17 @@ class WeatherScreenViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_weather)
         weatherScreenViewModel.liveData.observe(this, Observer(::render))
         weatherScreenViewModel.requestWeather()
+//        Log.i("OUT", windspeed.toString() ?: "null")
+
         findViewById<Button>(R.id.btnWind).setOnClickListener {
-            Intent(this, WindScreenActivity::class.java).also { startActivity(it) }
+            Intent(this, WindScreenActivity::class.java).apply {
+                putExtra("windSpeed", weatherScreenViewModel.liveData.value?.windDomainModel?.speed.toString())
+                putExtra("windDeg", weatherScreenViewModel.liveData.value?.windDomainModel?.deg.toString())
+            }.also {
+                startActivity(it)
+            }
         }
+
     }
 
     fun render(state: WeatherDomainModel) {
@@ -33,12 +42,10 @@ class WeatherScreenViewActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tvMaxTemperature).let {
             it.text = getString(R.string.temperature_max, state.maxtemperature)
         }
+        val windDomainModel = state.windDomainModel
+
     }
 
-
-//        binding.actvCity.setDebouncingTextListener {
-//            citiScreenViewModel.requestCities(it)
-//        }
 }
 
 //https://github.com/skull615d/weather/tree/NewBranch

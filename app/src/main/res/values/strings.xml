@@ -6,5 +6,8 @@
     <string name="humidity">Humidity %d </string>
     <string name="temperature_min">Min Temp %.2f °C</string>
     <string name="temperature_max">Max Temp %.2f °C</string>
+    <string name="windspeed">Speed: %2s mps</string>
+    <string name="winddeg">Wind direction: %2s deg</string>
+
 
 </resources>

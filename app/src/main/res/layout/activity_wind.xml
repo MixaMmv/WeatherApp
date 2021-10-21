@@ -6,28 +6,28 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvWindspeed"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="358dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginBottom="354dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Windspeed" />
-
-    <TextView
         android:id="@+id/tvWinddeg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="175dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="178dp"
+        android:text="Winddeg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWindspeed"
-        tools:text="Winddeg" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWindspeed" />
+
+    <TextView
+        android:id="@+id/tvWindspeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="180dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
